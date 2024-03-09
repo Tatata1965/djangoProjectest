@@ -15,15 +15,15 @@
 </form>
 
 {% if img_obj %}
-    <h3>Succesfully uploaded : {{img_obj.title}}</h3>
-    <img id='sos' src="{{ img_obj.Image.url}}" alt="аватарка пользователя">
+    <h3> Успешно загружен : {{img_obj.Название}}</h3>
+    <img id='sos' src="{{ img_obj.Изображение.url}}" alt="аватарка пользователя">
 {% endif %}
 
 <style>
     
     .d1 {
         position: absolute;
-        top: 20vh;
+        top: 30vh;
         left: 60vw;
         height: 5vh;
         width: 30vw;
@@ -39,6 +39,7 @@
         max-height:120px;
         width: auto;
         height: auto;
+        border-radius: 30vw;
 }
 
     button {
@@ -47,7 +48,7 @@
         top: 35vh;
         height: 4vh;
         width: 8vw;
-        font-size: 25px;
+        font-size: 20px;
         background: darkcyan;
         border-radius: 30vw;
     }

@@ -9,8 +9,8 @@ class ModelReg(models.Model):
 
 
 class Img(models.Model):
-    Image = models.ImageField(upload_to='images/')
-    title = models.CharField(max_length=30)
+    Изображение = models.ImageField(upload_to='images/')
+    Название = models.CharField(max_length=30)
 
 
 

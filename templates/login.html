@@ -47,31 +47,36 @@
 <form class="mb-3" action="" method="post">
     <input placeholder="login" name="login" >
     <input type="password"  placeholder="Пароль" name="password" >
-    <input type="password" placeholder="Повтор пароля">
+    <input type="password" placeholder="Повтор пароля" name="rpassword">
     <input type="email" name="email" placeholder="email">
     <input class="sub" type="submit" placeholder="зарегистрироваться">
     {{ err }}
-     <a href="https://t.me/egor5434_bot"><input type="button" value='Регистрация через бота'></a>
+ <!--    <a href="https://t.me/egor5434_bot"><input type="button" value='Регистрация через бота'></a>-->
 </form>
 <script>
     let form = document.querySelector('form');
     let login = form.login
     let pas = form.password
     let rpas = form.rpassword
+    let email= form.email
 
     form.onsubmit = function () {
-        if (login.value.length < 2) {
-            alert('логин слишком короткий')
+        if (login.value === '') {
+            alert('Имя пользователя не задано')
             return false
         }
-        if (pas.value.length < 5) {
-            alert('пароль слишком простой')
+        if (pas.value === '') {
+            alert('пароль не задан')
             return false
         }
         if (pas.value != rpas.value) {
             alert('пароль не совпадает с подтверждением')
             return false
         }
+        if (email.value === '') {
+            alert('email не задан')
+            return false
+        }    
     }
 </script>
 </body>
